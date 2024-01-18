@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/icon.png">
+  
+  <title>Profile card component</title>
+
+  <style>
+
+     @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+
+    body
+    {
+      background-image: url(./images/bg-pattern-top.svg) ,url(./images/bg-pattern-bottom.svg); 
+      background-repeat: no-repeat,no-repeat;
+      background-position: right 50vw bottom 5vh ,  left 45vw top 40vh;
+      background-color: hsl(185, 75%, 39%)
+    }
+
+    #profile-container
+    {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin-top: 24vh;
+    }
+
+    #profile-card
+    {
+      transform: rotate(0deg);
+      font-family: 'Kumbh Sans', sans-serif;
+      width: 300px;
+      height: 330px;
+      display: flex;
+      flex-direction: column;
+      border-radius: 10px;
+      background-color: white;
+
+      background-image: url('./images/bg-pattern-card.svg');
+      background-repeat: repeat-x;
+      background-size: 300px 120px;
+    }
+
+
+
+    #profile-address
+    {
+      flex-grow: 4;
+      
+    }
+
+    #profile-address > [alt="profile-image"]
+    {
+      border-radius: 50%;
+      border: 5px solid white;
+      position: relative;
+      left: 32%;
+      top: 27%;
+    }
+
+    #profile-address > p
+    {
+      line-height: 25px;
+      display: inline-block;
+      position: relative;
+      right: 8%;
+      top: 48%;
+      font-size: 18px;
+      
+    }
+
+    #profile-address > p > strong > span
+    {
+      font-weight: normal;
+      color: hsl(0, 0%, 59%);
+    }
+
+    #profile-address > p > span
+    {
+      color: hsl(0, 0%, 59%);
+      padding-left: 40px;
+      font-size: 12px;
+    }
+
+    hr
+    {
+      width: 100%;
+      border: none;
+      border-top: 2px solid hsl(0, 0%, 59%);
+      opacity: 0.3;
+      margin-top: 0;
+      margin-bottom: 18px;
+    }
+
+    #profile-stats
+    {
+      flex-grow: 1;
+    }
+   
+    #profile-stats > #profile-numbers
+    {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    #Likes
+    {
+      position: relative;
+      right: 8px;
+    }
+
+     #profile-stats > #profile-labels
+    {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      font-size: 12px;
+      font-weight: 400;
+      color: hsl(0, 0%, 59%);
+    }
+
+    footer
+    {
+      margin-top: 20vh;
+    }
+  </style>
+
+</head>
+<body>
+  <div id="profile-container">
+    <div id="profile-card"> 
+      <div id="profile-address">
+        <img src="./images/image-victor.jpg" alt="profile-image">
+        <p> <strong>Victor Crest <span>26</span></strong> <br> <span>London</span> </p> 
+      </div>
+      <hr>
+      <div id="profile-stats">
+        <div id="profile-numbers">
+          <div class="profile-item">80K</div>
+          <div class="profile-item">803K</div>
+          <div class="profile-item">1.4K</div>
+        </div>
+        <div id="profile-labels">
+          <div class="profile-item">Followers</div>
+          <div class="profile-item" id="Likes">Likes</div>
+          <div class="profile-item">Photos</div>
+        </div>
+      </div>      
+  </div>
+</div>
+
+</body>
+
+<footer>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/nisargasudeepmys">Nisarga Sudeep</a>.
+  </div>
+</footer>
+</html>
